@@ -1,0 +1,95 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Connection Settings"
+    },
+    "children": [
+      {
+        "id": "ip_address",
+        "type": "text",
+        "label": {
+          "en": "IP Address"
+        },
+        "value": "",
+        "required": true
+      },
+      {
+        "id": "username",
+        "type": "text",
+        "label": {
+          "en": "Username"
+        },
+        "value": "",
+        "required": true
+      },
+      {
+        "id": "password",
+        "type": "password",
+        "label": {
+          "en": "Password"
+        },
+        "value": "",
+        "required": true
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Performance Settings"
+    },
+    "children": [
+      {
+        "id": "target_mode",
+        "type": "dropdown",
+        "label": {
+          "en": "Target Mode"
+        },
+        "values": [
+          {
+            "id": "power_target",
+            "label": {
+              "en": "Power Target Mode"
+            }
+          },
+          {
+            "id": "hashrate_target",
+            "label": {
+              "en": "Hashrate Target Mode"
+            }
+          }
+        ],
+        "default": "power_target"
+      },
+      {
+        "id": "power_target_value",
+        "type": "number",
+        "label": {
+          "en": "Power Target Value"
+        },
+        "min": 19,
+        "max": 79,
+        "units": {
+          "en": "W"
+        },
+        "default": 50
+      },
+      {
+        "id": "hashrate_target_value",
+        "type": "number",
+        "label": {
+          "en": "Hashrate Target Value"
+        },
+        "min": 0.12,
+        "max": 2.67,
+        "step": 0.005,
+        "decimals": 3,
+        "units": {
+          "en": "TH/s"
+        },
+        "default": 1
+      }
+    ]
+  }
+]

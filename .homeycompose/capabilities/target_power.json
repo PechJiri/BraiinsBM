@@ -1,0 +1,17 @@
+{
+    "type": "number", 
+    "title": {
+      "en": "Target Power"
+    },
+    "units": {
+      "en": "W"
+    },
+    "min": 19,
+    "max": 79,
+    "getable": true,
+    "setable": true,
+    "decimals": 0,
+    "insights": false,
+    "uiComponent": "slider",
+    "icon": "/assets/target_power.svg"
+   }

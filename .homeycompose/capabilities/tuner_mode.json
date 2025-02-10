@@ -1,0 +1,24 @@
+{
+    "type": "enum",
+    "title": {
+      "en": "Tuner Mode"
+    },
+    "values": [
+      {
+        "id": "power_target",
+        "title": {
+          "en": "Power Target Mode"
+        }
+      },
+      {
+        "id": "hashrate_target",
+        "title": {
+          "en": "Hashrate Target Mode"
+        }
+      }
+    ],
+    "getable": true,
+    "setable": false,
+    "uiComponent": "picker",
+    "icon": "/assets/tuner_mode.svg"
+  }

@@ -1,0 +1,43 @@
+{
+  "id": "com.braiins.bm",
+  "version": "1.0.0",
+  "compatibility": "12.3.0",
+  "sdk": 3,
+  "brandColor": "#00275b",
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "Braiins BM Miner"
+  },
+  "description": {
+    "en": "Adds support for Braiins BM bitcoin miners"
+  },
+  "category": [
+    "internet"
+  ],
+  "permissions": [],
+  "icon": "/assets/icon.svg",
+  "images": {
+    "small": "/assets/images/small.jpg",
+    "large": "/assets/images/large.jpg",
+    "xlarge": "/assets/images/xlarge.jpg"
+  },
+  "author": {
+    "name": "Jiri Pech",
+    "email": "jiri.pech@centrum.cz"
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "pechjiri"
+      },
+      "githubSponsors": {
+        "username": "PechJiri"
+      }
+    }
+  },
+  "source": "https://github.com/PechJiri/BraiinsBM",
+  "homepage": "https://braiins.com/",
+  "support": "mailto:jiri.pech@centrum.cz"
+}

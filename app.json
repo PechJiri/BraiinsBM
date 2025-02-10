@@ -1,0 +1,258 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.braiins.bm",
+  "version": "1.0.0",
+  "compatibility": "12.3.0",
+  "sdk": 3,
+  "brandColor": "#00275b",
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "Braiins BM Miner"
+  },
+  "description": {
+    "en": "Adds support for Braiins BM bitcoin miners"
+  },
+  "category": [
+    "internet"
+  ],
+  "permissions": [],
+  "icon": "/assets/icon.svg",
+  "images": {
+    "small": "/assets/images/small.jpg",
+    "large": "/assets/images/large.jpg",
+    "xlarge": "/assets/images/xlarge.jpg"
+  },
+  "author": {
+    "name": "Jiri Pech",
+    "email": "jiri.pech@centrum.cz"
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "pechjiri"
+      },
+      "githubSponsors": {
+        "username": "PechJiri"
+      }
+    }
+  },
+  "source": "https://github.com/PechJiri/BraiinsBM",
+  "homepage": "https://braiins.com/",
+  "support": "mailto:jiri.pech@centrum.cz",
+  "drivers": [
+    {
+      "name": {
+        "en": "BM Miner"
+      },
+      "class": "other",
+      "capabilities": [
+        "fan_speed",
+        "alarm_generic",
+        "measure_power",
+        "measure_temperature",
+        "onoff"
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "images": {
+        "small": "/drivers/bm-miner/assets/images/small.jpg",
+        "large": "/drivers/bm-miner/assets/images/large.jpg",
+        "xlarge": "/drivers/bm-miner/assets/images/xlarge.jpg"
+      },
+      "pair": [
+        {
+          "id": "pair",
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "bm-miner",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Connection Settings"
+          },
+          "children": [
+            {
+              "id": "ip_address",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              },
+              "value": "",
+              "required": true
+            },
+            {
+              "id": "username",
+              "type": "text",
+              "label": {
+                "en": "Username"
+              },
+              "value": "",
+              "required": true
+            },
+            {
+              "id": "password",
+              "type": "password",
+              "label": {
+                "en": "Password"
+              },
+              "value": "",
+              "required": true
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Performance Settings"
+          },
+          "children": [
+            {
+              "id": "target_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "Target Mode"
+              },
+              "values": [
+                {
+                  "id": "power_target",
+                  "label": {
+                    "en": "Power Target Mode"
+                  }
+                },
+                {
+                  "id": "hashrate_target",
+                  "label": {
+                    "en": "Hashrate Target Mode"
+                  }
+                }
+              ],
+              "default": "power_target"
+            },
+            {
+              "id": "power_target_value",
+              "type": "number",
+              "label": {
+                "en": "Power Target Value"
+              },
+              "min": 19,
+              "max": 79,
+              "units": {
+                "en": "W"
+              },
+              "default": 50
+            },
+            {
+              "id": "hashrate_target_value",
+              "type": "number",
+              "label": {
+                "en": "Hashrate Target Value"
+              },
+              "min": 0.12,
+              "max": 2.67,
+              "step": 0.005,
+              "decimals": 3,
+              "units": {
+                "en": "TH/s"
+              },
+              "default": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "measure_hashrate": {
+      "type": "number",
+      "title": {
+        "en": "Hashrate"
+      },
+      "units": {
+        "en": "TH/s"
+      },
+      "min": 0,
+      "max": 3,
+      "getable": true,
+      "setable": false,
+      "decimals": 2,
+      "insights": true,
+      "uiComponent": "sensor",
+      "icon": "/assets/hashrate.svg"
+    },
+    "mining_state": {
+      "type": "enum",
+      "title": {
+        "en": "Mining State"
+      },
+      "values": [
+        {
+          "id": "mining",
+          "title": {
+            "en": "Mining"
+          }
+        },
+        {
+          "id": "paused",
+          "title": {
+            "en": "Paused"
+          }
+        },
+        {
+          "id": "error",
+          "title": {
+            "en": "Error"
+          }
+        }
+      ],
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/mining_state.svg"
+    },
+    "tuner_mode": {
+      "type": "enum",
+      "title": {
+        "en": "Tuner Mode"
+      },
+      "values": [
+        {
+          "id": "power_target",
+          "title": {
+            "en": "Power Target Mode"
+          }
+        },
+        {
+          "id": "hashrate_target",
+          "title": {
+            "en": "Hashrate Target Mode"
+          }
+        }
+      ],
+      "getable": true,
+      "setable": false,
+      "uiComponent": "picker",
+      "icon": "/assets/tuner_mode.svg"
+    }
+  }
+}

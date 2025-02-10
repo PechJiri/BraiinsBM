@@ -1,0 +1,17 @@
+{
+    "type": "number",
+    "title": {
+      "en": "Hashrate" 
+    },
+    "units": {
+      "en": "TH/s"
+    },
+    "min": 0,
+    "max": 3,
+    "getable": true,
+    "setable": false,
+    "decimals": 2,
+    "insights": true,
+    "uiComponent": "sensor",
+    "icon": "/assets/hashrate.svg"
+   }

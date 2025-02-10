@@ -1,0 +1,30 @@
+{
+    "type": "enum",
+    "title": {
+      "en": "Mining State"
+    },
+    "values": [
+      {
+        "id": "mining",
+        "title": {
+          "en": "Mining"
+        }
+      },
+      {
+        "id": "paused", 
+        "title": {
+          "en": "Paused"
+        }
+      },
+      {
+        "id": "error",
+        "title": {
+          "en": "Error"  
+        }
+      }
+    ],
+    "getable": true,
+    "setable": false,
+    "uiComponent": "sensor",
+    "icon": "/assets/mining_state.svg"
+   }
